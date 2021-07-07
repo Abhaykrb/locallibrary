@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Book List</h1>
+{% if book_list %}
+<ul>
+    <!-- here and book is just model name  and must use book_list if you use book variable variablename_list better use modelname -->
+    {% for book in book_list %}<!-- iterates over that condition-->
+    <li>
+        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>There are no books in the library.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Author: {{ author.first_name }} {{ author.last_name }}</h1>
+<h2>Books</h2>
+
+    <hr>
+<!-- here foeign key has been defined in book model with author but not in author with book model so to access about authors book fields we used author.book_set.all-->
+    {% for copy in author.book_set.all %}
+  
+    <h5>{{copy.title}}</h5>
+<p><strong>Summary:</strong> {{ copy.summary }}</p>
+    {% endfor %}
+
+{% endblock %}
