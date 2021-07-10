@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'locallibrary',
         'USER': 'postgres',
-        'PASSWORD': 'desumapper',
+        'PASSWORD': 'webmapper',
         'HOST': 'localhost'
     }
 }
